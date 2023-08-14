@@ -42,7 +42,9 @@ function content_item_wrapper(items, type = "default",) {
     const contentItemWrapper = document.createElement('div');
     contentItemWrapper.className = 'Content__item__wrapper';
 
-    contentItemWrapper.style.width = (100 * items.length) + '%';
+    if(type != "default") {
+        contentItemWrapper.style.width = (100 * items.length) + '%';
+    }
     console.log(contentItemWrapper.style.width);
 
     items.forEach(item => {
