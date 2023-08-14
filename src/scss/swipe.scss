@@ -1,0 +1,99 @@
+/* css cho layout content mà content được tổ chức thành giao diện trượt */
+
+.swipe {
+    .Content__item__box {
+        overflow: hidden;
+    }
+    
+    .Content__item__wrapper {
+        display: flex;
+        transform: translate3d(0px, 0px, 0px);
+        transition-duration: 0.5s;
+        align-items: center;
+        height: 100%;
+        margin-top: 0;
+    }
+    
+    .Content__item__swipe {
+        height: 290px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        border: 0.7px solid #E2E2E2;
+        background: #FFF;
+        padding: 10px;
+        margin: 10px;
+        margin-right: 0;
+        width: 180px;
+    }
+    
+    .Content__item__info__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 12px;
+    }
+    
+    .Content__item__image {
+        width: 160px;
+        height: 160px;
+        border-radius: 5px;
+        border: 0.7px solid #E2E2E2;
+    }
+    
+    .Content__item__info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .item__info__description {
+        width: 100%;
+        -webkit-line-clamp: 3;
+    }
+    
+    .item__info__link > a {
+        min-width: 100px;
+        min-height: 22px;
+        background-color: #0640D2;
+        color: #FFF;
+        font-weight: 900;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+    
+    .item__info__link > a > svg {
+        display: none;
+    }
+    
+    .Wrapper__move__swipe {
+        bottom: 47px;
+        right: 50%;
+        transform: translateX(50%);
+        background-color: transparent;
+        display: flex;
+        width: 70px;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 1;
+        padding: 9px 10px;
+        display: flex;
+    }
+    
+    .Wrapper__move__control {
+        width: 6px;
+        height: 6px;
+        background-color: rgb(197, 197, 197);
+        border-radius: 100%;
+    }
+    
+    .Footer {
+        margin-top: 7px;
+    }
+}
+
+
