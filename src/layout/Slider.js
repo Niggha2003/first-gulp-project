@@ -1,11 +1,14 @@
-function Slider(props = {items: [],}) {
+import { content } from "../modules/Content.js";
+import { content_item } from "../modules/ContentItem.js";
+
+export default function Slider(props = {items: [],}) {
     const slider = document.createElement('div');
     slider.className = 'Content';
 
-    slider.appendChild(content_banner({type: 'video'}));
-    slider.appendChild(content_banner_mini());
+    slider.appendChild(content.content_banner({type: 'video'}));
+    slider.appendChild(content.content_banner_mini());
 
-    const ctw = content_item_wrapper(props.items, 'slider');
+    const ctw = content_item.content_item_wrapper(props.items, 'slider');
 
     slider.appendChild(ctw);
 

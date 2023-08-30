@@ -1,3 +1,10 @@
+import BigSwipe from "../layout/bigSwipe.js";
+import Slider from "../layout/slider.js";
+import Swipes from "../layout/Swipes.js";
+import { header } from "../modules/Header.js";
+import { footer } from "../modules/Footer.js";
+
+
 function Wrapper(props = {}) {
     const wrapper = document.createElement('div');
     wrapper.className = "Wrapper";
@@ -28,14 +35,14 @@ function Wrapper(props = {}) {
         wrapper.appendChild(swipe_move())
     }
 
-    wrapper.appendChild(dartLogo())
-    wrapper.appendChild(Header())
+    wrapper.appendChild(header.dartLogo())
+    wrapper.appendChild(header.Header())
 
     if(props.children) {
         wrapper.appendChild(props.children({items: props.items}));
     }
     
-    wrapper.appendChild(Footer())
+    wrapper.appendChild(footer.Footer())
 
     return wrapper;
 }
@@ -53,3 +60,6 @@ function swipe_move() {
 
     return moveSwipe;
 }
+
+export const wrapper = {Wrapper, swipe_move}
+

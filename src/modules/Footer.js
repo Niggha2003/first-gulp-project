@@ -10,3 +10,5 @@ function Footer() {
     `
     return footer
 }
+
+export const footer = {Footer}

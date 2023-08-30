@@ -11,9 +11,6 @@ const gulp           = require('gulp'),
 function scripts() {
     return gulp.src('./src/**/*.js')
       .pipe( sourcemaps.init() )
-      .pipe( concat( "all.min.js" ) )
-      .pipe( uglify() )
-      .pipe( rename( "main.min.js" ) )
       .pipe( livereload() )
       .pipe( sourcemaps.write() )
       .pipe( gulp.dest( "./assets/js" ) );

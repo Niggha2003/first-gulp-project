@@ -27,3 +27,5 @@ function dartLogo() {
 
     return dartLogo;
 }
+
+export const header = {Header, dartLogo}
